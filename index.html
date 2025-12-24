@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form for club</title>
+</head>
+<body>
+    <!-- make a form where the user input their name, phone number, age, email, description, gender using radio buttons, 
+     and mark their hobbies using checkbox,and hidden input giving the id 12345, make sure every input aspect is required, upload a picture, ans also enter the password
+     , also link the page to "link.html" so that the details are not added to the URL, also apply the method over the whole form, make a submit ans save button at the end of the form,
+     also add a dropdown menu over the form asking for their country where the default selection should be India and in the last create a drop doen menu asking 
+     for their city where the first option should be disabled for their selction.  -->
+     <h1>this is your time to shine </h1>
+    <form action="link.html" method="post">
+        <label for="name">Name:</label>
+        <input type="text" name="name" required placeholder="enter name..."><br>
+
+        <label for="age">Age:</label>
+        <input type="number" name="age" value="age" required placeholder="enter age..."><br>
+
+        <label for="phone number">Phone number:</label>
+        <input type="text" name="number" pattern="/d{10}" required placeholder="enter contact..."><br>
+
+        <label for="email">E-mail:</label>
+        <input type="email" name="email" required placeholder="enter email..." pattern="[a-z][0-9]{3}@gmail.com"><br>
+
+        <label for="password">Password:</label>
+        <input type="password" required placeholder="enter password"><br>
+
+        <label for="file">File:</label>
+        <input type="file" name="file" value="file" required><br>
+        
+        <label for="gender">Gender:</label><br>
+        <input type="radio" name="gender">
+        <label for="male">Male</label><br>
+        <input type="radio" name="gender">
+        <label for="female">Female</label><br>
+
+        <label for="description">Description:</label><br>
+        <input type="text" name="description" placeholder="enter description..." required><br>
+
+        <label for="hobbies">hobbies:-</label><br>
+        <input type="checkbox">
+        <label for="tennis">Tennis</label><br>
+        <input type="checkbox">
+        <label for="boxing">Boxing</label><br>
+        <input type="checkbox">
+        <label for="reading">Reading</label><br>
+        <input type="checkbox">
+        <label for="sports">Sports</label><br>
+        <input type="checkbox">
+        <label for="drawing">Drawing</label><br>
+        <input type="checkbox">
+        <label for="singing">Singing</label><br>
+
+        <input type="text" name="hide" value="12345" hidden>
+
+        <h3 aria-readonly="true">select your country and city from here:-</h3>
+        <select name="country" id="country">
+            <option disabled>Select your country</option>
+            <option value="ind" selected>India</option>
+            <option value="aus">Australia</option>
+            <option value="usa">USA</option>
+            <option value="chn">China</option>
+        </select><br>
+
+        <select name="city" id="city">
+            <option disabled>Select your city</option>
+            <option value="mum">Mumbai</option>
+            <option value="del">Delhi</option>
+            <option value="che">Chennai</option>
+            <option value="kol">Kolkata</option>
+        </select><br>
+
+        <button type="submit" style="color: green;">Submit</button><br>
+        <button type="button" style="color: blue;">Save</button>
+    </form>
+</body>
+</html>
