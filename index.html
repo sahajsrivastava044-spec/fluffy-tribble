@@ -4,6 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form for club</title>
+    <style>
+        #btn1:active{
+            background-color:cyan;
+        }
+        #btn2:focus{
+            background-color: lightblue;
+        }
+        button:hover{
+            background-color: red;
+        }
+    </style>
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
     <!-- make a form where the user input their name, phone number, age, email, description, gender using radio buttons, 
@@ -11,8 +23,8 @@
      , also link the page to "link.html" so that the details are not added to the URL, also apply the method over the whole form, make a submit ans save button at the end of the form,
      also add a dropdown menu over the form asking for their country where the default selection should be India and in the last create a drop doen menu asking 
      for their city where the first option should be disabled for their selction.  -->
-     <h1>this is your time to shine </h1>
-    <form action="link.html" method="post">
+     <h1 id="h1">this is your time to shine </h1>
+    <form action="link.html" method="post" class="container">
         <label for="name">Name:</label>
         <input type="text" name="name" required placeholder="enter name..."><br>
 
@@ -73,8 +85,18 @@
             <option value="kol">Kolkata</option>
         </select><br>
 
-        <button type="submit" style="color: green;">Submit</button><br>
-        <button type="button" style="color: blue;">Save</button>
+        <button type="submit" style="color: green;" id="btn1">Submit</button><br>
+        <button type="button" style="color: blue;" id="btn2">Save</button>
     </form>
+    <!-- <a href="#">Hover over me!</a>
+<input type="text" placeholder="Focus on me!">
+<ul>
+  <li>First item</li>
+  <li>Second item</li>
+  <li>Third item</li>
+</ul> -->
+<p>This is a paragraph with special styling.</p>
+<input type="text" placeholder="Enter your name">
+<div class="decorated">Special content</div>
 </body>
 </html>
